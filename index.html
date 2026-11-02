@@ -303,7 +303,7 @@ footer a:hover{color:var(--ink)}
       </div>
       <ul class="tiles" role="list" aria-label="Measured results" style="list-style:none;padding:0">
         <li class="tile" data-in style="--d:.7s"><div class="num">50 <small>NSE stocks</small></div><div class="lbl">Live market dashboard</div></li>
-        <li class="tile" data-in style="--d:.78s"><div class="num">24,068 <small>Mn</small></div><div class="lbl">Monthly UPI transactions analyzed</div></li>
+        <li class="tile" data-in style="--d:.78s"><div class="num">0.633 <small>Macro-F1</small></div><div class="lbl">Flood-level triage, held-out test</div></li>
       </ul>
     </div>
     <canvas class="dots" id="dots" aria-hidden="true"></canvas>
@@ -332,25 +332,13 @@ footer a:hover{color:var(--ink)}
         </article>
         <article class="card rv" aria-labelledby="p2">
           <div class="card-main">
-            <div class="idx">P/02 <span class="badge concept">Concept project · building now</span></div>
-            <h3 id="p2">UPI Ecosystem Pulse</h3>
-            <p class="sub">India's digital-payments growth</p>
+            <div class="idx">P/02 <span class="badge blue">Hackathon · Nov 2026</span></div>
+            <h3 id="p2">Flood Triage</h3>
+            <p class="sub">Ranking citizen flood photos for ward officers</p>
             
-            <dl class="rows"><div class="row"><dt>Question</dt><dd>Make India's digital-payments growth visible.</dd></div><div class="row"><dt>Data</dt><dd>Official NPCI UPI statistics, Apr–Sep 2026.</dd></div><div class="row"><dt>Method</dt><dd>Power BI dashboard (premium light theme).</dd></div><div class="row res"><dt>Result</dt><dd><span class="big dim">In progress</span>In progress — not yet published.</dd></div></dl>
-            <div class="tags"><span class="tag">Power BI</span><span class="tag">NPCI data</span></div>
-            <figure class="shot" hidden><img data-src="assets/upi-ecosystem-pulse.png" alt="UPI Ecosystem Pulse Power BI dashboard" loading="lazy" decoding="async" width="1600" height="1000"></figure>
-            <div class="links"><span class="soon"><span class="sym" aria-hidden="true">schedule</span>Coming soon</span></div>
-          </div>
-        </article>
-        <article class="card rv" aria-labelledby="p3">
-          <div class="card-main">
-            <div class="idx">P/03</div>
-            <h3 id="p3">E-commerce ETL Pipeline</h3>
-            <p class="sub">Cleaning sales data for analysis</p>
-            
-            <dl class="rows"><div class="row"><dt>Question</dt><dd>Messy sales data needs cleaning before analysis.</dd></div><div class="row"><dt>Data</dt><dd>E-commerce sales records.</dd></div><div class="row"><dt>Method</dt><dd>Python/pandas ETL pipeline.</dd></div></dl>
-            <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">ETL</span></div>
-            <div class="links"><a class="btn btn-secondary" href="https://github.com/Aryan787913" target="_blank" rel="noopener noreferrer">GitHub profile <span class="sym" aria-hidden="true">north_east</span><span class="sr">(opens in new tab)</span></a></div>
+            <dl class="rows"><div class="row"><dt>Question</dt><dd>During urban flooding, which citizen street photos show the worst water levels, so officers can respond to them first?</dd></div><div class="row"><dt>Data</dt><dd>STURM-FloodDepth (CC BY 4.0): 340 held-out test crops of flooded vehicles, plus 20 real Indian monsoon photos for a qualitative check.</dd></div><div class="row"><dt>Method</dt><dd>Meta's open-weight Muse Spark Open, prompted few-shot, reads the water level against the vehicle (L0–L4) or answers "can't tell". It's combined with a CLIP linear-probe baseline. A Gradio app ranks reports worst-first and drafts a ward note.</dd></div><div class="row res"><dt>Result</dt><dd><span class="big">0.633</span>Macro-F1 on the leak-free test split, against 0.580 for the baseline. Gross errors (off by 2+ levels) dropped from 35 to 17. The test set was scored once.</dd></div></dl>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Muse Spark Open</span><span class="tag">OpenCLIP</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">Gradio</span></div>
+            <div class="links"><a class="btn btn-accent" href="https://youtu.be/f3huyJmgsEg" target="_blank" rel="noopener noreferrer">Demo video <span class="sym" aria-hidden="true">north_east</span><span class="sr">(opens in new tab)</span></a><a class="btn btn-secondary" href="https://github.com/Aryan787913/flood-triage" target="_blank" rel="noopener noreferrer">Code <span class="sym" aria-hidden="true">north_east</span><span class="sr">(opens in new tab)</span></a></div>
           </div>
         </article>
       </div>
@@ -379,8 +367,8 @@ footer a:hover{color:var(--ink)}
       </div>
       <div class="skills">
         <div class="skill rv"><span class="sym" aria-hidden="true">database</span><h3>SQL</h3><p>PostgreSQL, MySQL — joins, CTEs, window functions.</p><div class="used">MarketPulse</div></div>
-        <div class="skill rv"><span class="sym" aria-hidden="true">code</span><h3>Python</h3><p>pandas, ETL scripting.</p><div class="used">MarketPulse · E-commerce ETL</div></div>
-        <div class="skill rv"><span class="sym" aria-hidden="true">bar_chart</span><h3>Power BI</h3><p>Dashboard design and reporting.</p><div class="used">UPI Ecosystem Pulse</div></div>
+        <div class="skill rv"><span class="sym" aria-hidden="true">code</span><h3>Python</h3><p>pandas, ETL scripting.</p><div class="used">MarketPulse · Flood Triage</div></div>
+        <div class="skill rv"><span class="sym" aria-hidden="true">bar_chart</span><h3>Power BI</h3><p>Dashboard design and reporting.</p></div>
         <div class="skill rv"><span class="sym" aria-hidden="true">table</span><h3>Excel</h3><p>Cleaning, reporting.</p><div class="used">Data preparation</div></div>
         <div class="skill rv"><span class="sym" aria-hidden="true">monitoring</span><h3>Tableau</h3><p>One dashboard.</p></div>
       </div>
